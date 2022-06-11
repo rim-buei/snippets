@@ -4,6 +4,6 @@ version = "0.1.0"
 authors = ["Rim <rim.buei@gmail.com>"]
 
 [dependencies]
-crossbeam = "0.2.8"
-num = "0.1.27"
+crossbeam = "0.8.1"
 image = "0.13.0"
+num = "0.4.0"

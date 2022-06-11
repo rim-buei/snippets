@@ -163,11 +163,12 @@ fn main() {
                 let band_lower_right =
                     pixel_to_point(bounds, (bounds.0, top + height), upper_left, lower_right);
 
-                spawner.spawn(move || {
+                spawner.spawn(move |_| {
                     render(band, band_bounds, band_upper_left, band_lower_right);
                 });
             }
         })
+        .unwrap()
     }
 
     write_image(&args[1], &pixels, bounds).expect("error writing PNG file");
